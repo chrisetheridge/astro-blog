@@ -1,0 +1,32 @@
+---
+import Layout from "../components/Layout.astro";
+import Heading from "../components/Heading.astro";
+import Prose from "../components/Prose.astro";
+---
+
+<Layout title="About — Chris Etheridge's Blog" description="About Chris Etheridge's Blog.">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Chris Etheridge's Blog",
+    "description": "About Chris Etheridge's Blog.",
+    "url": new URL("/about", Astro.site).href,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Chris Etheridge's Blog",
+      "url": Astro.site?.href,
+    },
+  })} />
+  <section class="about">
+    <Heading as="h1">About</Heading>
+    <Prose>
+
+    </Prose>
+  </section>
+</Layout>
+
+<style>
+  .about {
+    max-width: var(--width-content);
+  }
+</style>
