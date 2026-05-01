@@ -10,8 +10,6 @@ AI is genuinely useful, at least to me. It is probably the biggest shift in prod
 
 However, my increased usage of AI tooling started to bother me.
 
-By "AI brain rot", I mean the gradual erosion of engineering judgment through underuse.
-
 # AI for coding
 
 I didn't start feeling uncomfortable because of coding. For me, coding has rarely been the hardest part of engineering. Once you've learned two or three languages, actually writing code becomes pretty straightforward.
@@ -59,7 +57,7 @@ Instead of turning the AI off, I started thinking about a different approach.
 
 # Adding friction in the right place
 
-I ended up [building an extension]https://github.com/chrisetheridge/pi-extension-architect for the Pi agent, as well as a skill for other harnesses. It forces the user to work through designing a solution before writing any code. You do not get to skip the design phase.
+I ended up [building an extension](https://github.com/chrisetheridge/pi-extension-architect) for the Pi agent, as well as a skill for other harnesses. It forces the user to work through designing a solution before writing any code. You do not get to skip the design phase.
 
 When I issue a task like "build an email system", which is intentionally vague because my prompts are often more detailed, the agent does not immediately start grepping code and writing functions. It interrupts the flow of work and starts asking me questions.
 

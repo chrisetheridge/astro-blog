@@ -3,25 +3,38 @@ import PaintDrips from "./PaintDrips.astro";
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="nav">
-  <PaintDrips id="nav-drips" minHeight="12rem" />
-  <div class="nav-content">
-    <a href="/" class="nav-brand">chrisetheridge's Blog</a>
-    <div class="nav-links">
-      <a href="/tags" class:list={[{ active: currentPath.startsWith("/tags") }]}>Tags</a>
-      <a href="/search" class:list={[{ active: currentPath === "/search" || currentPath === "/search/" }]}>Search</a>
-      <a href="/about" class:list={[{ active: currentPath === "/about" || currentPath === "/about/" }]}>About</a>
-      <a href="/rss.xml">RSS</a>
+<div>
+  <PaintDrips id="nav-drips" height="12rem" />
+  <header class="nav">
+    <div class="nav-content">
+      <a href="/" class="nav-brand">chrisetheridge</a>
+      <div class="nav-links">
+        <a
+          href="/tags"
+          class:list={[{ active: currentPath.startsWith("/tags") }]}>Tags</a
+        >
+        <a
+          href="/search"
+          class:list={[
+            { active: currentPath === "/search" || currentPath === "/search/" },
+          ]}>Search</a
+        >
+        <a
+          href="/about"
+          class:list={[
+            { active: currentPath === "/about" || currentPath === "/about/" },
+          ]}>About</a
+        >
+        <a href="/rss.xml">RSS</a>
+      </div>
     </div>
-  </div>
-</header>
-
+  </header>
+</div>
 <style>
   .nav {
     position: relative;
-    overflow: hidden;
     isolation: isolate;
-    padding: var(--space-lg) 0;
+    padding: var(--space-lg) var(--space-lg);
     border-bottom: 1px solid var(--color-border);
     margin-bottom: var(--space-2xl);
   }
