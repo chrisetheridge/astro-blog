@@ -10,8 +10,6 @@ AI is genuinely useful, at least to me. It is probably the biggest shift in prod
 
 However, my increased usage of AI tooling started to bother me.
 
-By "AI brain rot", I mean the gradual erosion of engineering judgment through underuse.
-
 # AI for coding
 
 I didn't start feeling uncomfortable because of coding. For me, coding has rarely been the hardest part of engineering. Once you've learned two or three languages, actually writing code becomes pretty straightforward.
