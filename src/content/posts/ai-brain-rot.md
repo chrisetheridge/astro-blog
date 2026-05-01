@@ -59,7 +59,7 @@ Instead of turning the AI off, I started thinking about a different approach.
 
 # Adding friction in the right place
 
-I ended up [building an extension]https://github.com/chrisetheridge/pi-extension-architect for the Pi agent, as well as a skill for other harnesses. It forces the user to work through designing a solution before writing any code. You do not get to skip the design phase.
+I ended up [building an extension](https://github.com/chrisetheridge/pi-extension-architect) for the Pi agent, as well as a skill for other harnesses. It forces the user to work through designing a solution before writing any code. You do not get to skip the design phase.
 
 When I issue a task like "build an email system", which is intentionally vague because my prompts are often more detailed, the agent does not immediately start grepping code and writing functions. It interrupts the flow of work and starts asking me questions.
 

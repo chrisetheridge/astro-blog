@@ -23,7 +23,7 @@ const totalPages = Math.ceil(allPosts.length / PAGE_SIZE);
   })} />
   <section class="home">
     <header class="home-header">
-      <Heading as="h1">Chris Etheridge's Blog</Heading>
+      <Heading as="h1">Chris' Blog</Heading>
       <p class="home-tagline">Writing about engineering, AI, and living in an agentic world.</p>
     </header>
     <ul class="post-list">
@@ -65,6 +65,7 @@ const totalPages = Math.ceil(allPosts.length / PAGE_SIZE);
 <style>
   .home {
     max-width: var(--width-content);
+    margin: 0 auto;
   }
 
   .home-header {

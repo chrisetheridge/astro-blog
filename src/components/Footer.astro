@@ -3,18 +3,19 @@ import PaintDrips from "./PaintDrips.astro";
 const year = new Date().getFullYear();
 ---
 
-<footer class="footer">
+<div>
+  <footer class="footer">
+    <p>&copy; {year} Chris Etheridge. All rights reserved.</p>
+  </footer>
   <PaintDrips id="footer-drips" minHeight="12rem" />
-  <p>&copy; {year} Chris Etheridge. All rights reserved.</p>
-</footer>
-
+</div>
 <style>
   .footer {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     isolation: isolate;
     margin-top: var(--space-2xl);
-    padding: var(--space-lg) 0;
+    padding: var(--space-lg) var(--space-lg);
     border-top: 1px solid var(--color-border);
   }
 
