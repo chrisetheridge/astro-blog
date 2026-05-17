@@ -41,7 +41,9 @@ I keep going until the questions start repeating or the added precision stops ch
 
 ## From decision to code
 
-After that, I write the decision down.
+After that, I write the decision down as an ADR. I simply ask the agent to write the decisions into an ADR. I do not start a new session at this point, I use the existing grilling session as context for the ADR.
+
+> ADRs are fantastic for capturing [intent](https://newsletter.eng-leadership.com/p/how-to-avoid-ai-code-slop?utm_source=post-email-title&publication_id=1115815&post_id=197924950&utm_campaign=email-post-title&isFreemail=true&r=31nra0&triedRedirect=true&utm_medium=email). A big part of this process is ensuring the agent and I are aligned on intent.
 
 I use an ADR because both humans and models understand the format. It records the decision, the reasons behind it, and the tradeoffs I accepted. In the export example, the ADR might say: export from the rendered document, not the raw editor state, because users expect the downloaded Markdown to match what they previewed. That decision would rule out some simpler implementations and make the review easier later.
 
