@@ -1,3 +1,8 @@
+---
+title: "How I use AI for software engineering"
+description: "How I use AI coding agents to plan changes, write code, and keep production diffs reviewable."
+date: 2026-05-17
+---
 My AI coding workflow does not start with “build this.”
 
 If the task is small, that can be enough. For larger work, I get better results when I use the agent before implementation: first to explore the idea, then to challenge it, then to turn the decision into a plan the code can follow.
