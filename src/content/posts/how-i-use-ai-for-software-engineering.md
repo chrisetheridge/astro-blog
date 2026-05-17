@@ -3,13 +3,13 @@ title: "How I use AI for software engineering"
 description: "How I use AI coding agents to plan changes, write code, and keep production diffs reviewable."
 date: 2026-05-17
 ---
-My AI coding workflow does not start with “build this.”
+I've been reading many posts about how use people use AI, and how one approach is better than the other. I've been thinking about this a lot lately, and I've been experimenting with many different approaches. I've landed on a workflow that works well for me, which I want to share. 
 
-If the task is small, that can be enough. For larger work, I get better results when I use the agent before implementation: first to explore the idea, then to challenge it, then to turn the decision into a plan the code can follow.
+Firstly I don't "vibe code". I see AI as a powerful tool to improve my engineering capability. It is not a replacement for me. I also do not believe that we can use coding agents to do work fully AFK. I think a human should be in the loop for most of the work (but some work can be AFK, and that's okay!). I see the agent as a teammate. I'm not trying to spawn multiple agents, run huge orchestrations, and essentially be the 'big boss'. I still want to be part of the work.
 
-The benefit is that I stay oriented. By the time the agent writes code, I know what decision it is implementing, what tradeoffs I accepted, and what needs careful review.
+I get better results when I use the agent before implementation: first to explore the idea, then to interrogate it, then to turn the decision into a plan the code can follow. The benefit is that I stay in the loop. By the time the agent writes code, I know what decision it is implementing, what tradeoffs I accepted, and what needs careful review.
 
-I started doing this because large agent diffs made intent hard to see. The code often worked, but I struggled to explain why it had that shape. Some choices came from my requirements. Some came from the agent filling in gaps. During review, those looked the same.
+I started doing this because I got tired of seeing large amounts of essentially sloppy code. The code often worked, but I struggled to explain why it had that shape. Some choices came from my requirements. Some came from the agent filling in gaps. During review, those looked the same.
 
 This process works best for established codebases. It is hand-holdy, and it does not fit every task. Sometimes “please fix this bug” is enough. When the work is large, ambiguous, or headed for production, I stay close to the decisions and the code.
 
@@ -17,9 +17,11 @@ This process works best for established codebases. It is hand-holdy, and it does
 
 ## From idea to decision
 
-> When you see `$PHRASE` this is a skill. Depending on your agent, you may invoke skills using `$` or `/` commands.
+> When you see `$PHRASE` this is a skill. Depending on your agent, you may invoke skills using `$` or `/` commands. Skills are basically pre-defined prompts that the agent can invoke.
 
-I start by turning the idea into constraints the agent can work with.
+I start by turning a rough idea into a clearly defined request.
+
+![Creative squiggle](../images/squiggle.webp)
 
 With `$brainstorm`, I test the rough version of the request: the repo boundaries, likely libraries, missing requirements, and places where I need a human decision. The request might start as “add Markdown export to the notes app.” Before I want code, I want to know whether the repo already has export logic, whether export should use raw editor state or rendered Markdown, and whether the feature touches permissions, filenames, or background jobs.
 
@@ -103,10 +105,10 @@ I have tried using smaller models for implementation after planning with a stron
 
 ## Code still has a cost
 
-The point is not to make AI coding formal. The point is to avoid receiving a diff I cannot explain.
+I don't want to make the process working with AI overly formal.
 
-I am more productive with AI, and I build things I would not have attempted without it. For prototypes, I still move fast and stay loose. For production work, I want the agent to leave a trail: what we decided, what it built, what it tested, and what I need to review.
-
+I am more productive with AI, and I build things I would not have attempted without it. For prototypes, I still move fast and stay flexible. For production work, I want the agent to leave a trail: what we decided, what it built, what it tested, and what I need to review.
+ 
 ## No Silver Bullet
 
 I do not think my workflow is the right way to use AI for engineering. It is the version I ended up with after building with these tools, getting annoyed, and changing the process around them.
