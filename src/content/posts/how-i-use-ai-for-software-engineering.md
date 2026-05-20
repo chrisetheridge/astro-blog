@@ -125,6 +125,49 @@ You have to use the tools on real work to find out. Try public skills. Try a fra
 
 The setup that works is the one you shape through use. It should fit your codebase, your team, and the kinds of decisions you need to make. For me, that means ADRs, PRDs, specs, narrow skills, and reviewable slices. For you, it might be something else.
 
+## FAQ
+
+### Can you give me the workflow in a simple diagram?
+
+![AI engineering workflow](../images/ai-engineering-workflow.png)
+
+### Do you apply this to every task?
+
+No. I only apply it to tasks that involve complexity.
+
+This depends a lot on your team, repo, and the kind of features you're adding. There is nothing wrong with using a simple prompt for simple tasks.
+
+### Should my initial brainstorm prompt include lots of context?
+
+Yes. Add as much as you can think of in the initial prompt:
+
+- constraints
+- solution ideas
+- architecture design
+- existing code
+- relevant edge cases
+- prior decisions
+
+Every bit helps.
+
+### What about existing ADRs or specs that need to be extended?
+
+Use `grill-with-docs` and specify the existing documents.
+
+The process is the same as `grill-me`, except the agent updates the documents as you answer questions.
+
+### How do I decide between `to-prd` and `to-spec`?
+
+There will not always be a clean distinction.
+
+I recommend using both, reading the documents, and then deciding which one feels best for the task.
+
+### What do we do with specs once done?
+
+Throw them away, but only once the code is merged into your base branch.
+
+Until then, specs help reviewers understand the changes, and AI review tools can compare the code against specs and ADRs.
+
 ## References 
 
 - [Superpowers](https://github.com/obra/superpowers)
